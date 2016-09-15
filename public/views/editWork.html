@@ -1,0 +1,28 @@
+<div ng-init="getEditWork()">
+    <div class="form-style">
+        <form novalidate class="simple-form">
+
+            <div class="form-group">
+                <label for="Description">Description:</label>
+                <input type="text" ng-model="editIndividualWork.work_description" class="form-control" ng-value="{{getIndividualWork.work_description}}"/><br />
+            </div>
+
+            <div class="form-group">
+                <label for="Hours">Hours:</label>
+                <input type="text" ng-model="editIndividualWork.hours" class="form-control" ng-value="{{getIndividualWork.hours}}"/>
+            </div>
+r
+            <div>
+                <label for="datepicker">Date</label>
+                <input class="form-control" ng-model="editIndividualWork.date_time" id="datepicker" type="date" ng-value="{{getIndividualWork.date_time}}"/>
+            </div>
+            <input style="margin-top:20%" type="submit" ng-click="editWork()" value="Update work" class="btn btn-default"/>
+        </form>
+
+        <div class="lead">
+            <ul ng-repeat="msg in message">
+                <li><b>{{msg}}</b></li>
+            </ul><p ></p></div>
+    </div>
+
+</div>

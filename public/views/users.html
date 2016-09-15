@@ -1,0 +1,33 @@
+<div style="width:50%; margin-left:25%" ng-init="getAllUsers()">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Username</th>
+            <th>Preffered hours</th>
+            <th>Role</th>
+            <th>Created at</th>
+            <th></th>
+            <th>Options</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tr ng-repeat="user in allUsers">
+            <td>{{user.username}}</td>
+            <td>{{user.preffered_working_hours_per_day}}</td>
+            <td>{{user.roleName}}</td>
+            <td>{{user.created_at}}</td>
+            <td><a href="#edit-user/{{user.id}}">
+                <button class="btn btn-group">Edit</button>
+            </a></td>
+            <td>
+                <button class="btn btn-danger" ng-click="deleteUser($index, user.id)">Delete</button>
+            </td>
+            <td>
+                <a href="#edit-user-work/{{user.id}}"><button ng-show="adminUser()" class="btn btn-warning">Edit user's records</button></a>
+            </td>
+        </tr>
+    </table>
+    <a href="#add-user">
+        <button class="btn btn-success">Add new user</button>
+    </a>
+</div>

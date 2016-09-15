@@ -1,0 +1,24 @@
+
+<div class="form-style" ng-init="loginInit()">
+    <p class="lead">Set your desired username and password</p>
+    <form novalidate class="simple-form">
+        <div class="form-group">
+            <label for="Username">Username:</label>
+            <input type="text" ng-model="registerData.username" class="form-control" id="username" /><br />
+        </div>
+        <div class="form-group">
+            <label for="Password">Password:</label>
+            <input type="password" ng-model="registerData.password" class="form-control" id="password" />
+        </div>
+        <div class="form-group" style="margin-top:7%">
+            <label for="hours">Set your preferred number of working hours per day:</label>
+            <input type="text" ng-model="registerData.hours" class="form-control" id="prefferedhours" />
+        </div>
+        <input type="submit" ng-click="register()" value="Register" class="btn btn-default"/>
+    </form>
+    <div class="lead">
+        <ul ng-repeat="msg in message">
+            <li><b>{{msg}}</b></li>
+        </ul><p ></p></div>
+</div>
+

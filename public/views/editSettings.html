@@ -1,0 +1,10 @@
+<div class="form-style" ng-init="getSettings()">
+    <form novalidate class="simple-form">
+        <div class="form-group">
+            <label for="preffered_number_of_hours">Preffered your preffered number of working hours per day:</label>
+            <input type="text" ng-model="editedSettings.perday" class="form-control" id="preffered_number_of_hours" ng-value="getUserSettings" /><br />
+        </div>
+        <input type="submit" ng-click="setSettings()" value="Update" class="btn btn-default"/>
+    </form>
+    <div><p class="lead" style="margin-top: 7%">{{message}}</p></div>
+</div>

@@ -1,0 +1,13 @@
+<div ng-init="workList()">
+    <div ng-repeat="(key, export) in filterData">
+    <p>{{key}}</p>
+
+    <p>{{export[0].sum}}</p>
+
+    <div ng-repeat="exp in export">
+        <ul>
+            <li>{{exp.description}}</li>
+        </ul>
+    </div>
+</div>
+</div>

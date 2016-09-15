@@ -1,0 +1,29 @@
+<div ng-init="getEditUser()">
+    <div class="form-style">
+        <form novalidate class="simple-form">
+            <div class="form-group">
+                <label for="Username">Username:</label>
+                <input type="text" ng-model="editUserData.username" class="form-control"
+                       ng-value="{{getSingleUser.username}}" id="Username"/><br/>
+            </div>
+            <div class="form-group">
+                <label for="preffered_number_of_hours">Set preferred number of working hours per day:</label>
+                <input type="text" ng-model="editUserData.preffered_working_hours_per_day" class="form-control"
+                       ng-value="{{getSingleUser.preffered_working_hours_per_day}}"
+                       id="preffered_number_of_hours"/><br/>
+            </div>
+            <label for="role">Role:</label><br>
+            <select class="btn btn-default" name="role" ng-model="editUserData.role">
+                <option value="3">Regular User</option>
+                <option value="2">User Manager</option>
+            </select>
+            <br>
+            <input style="margin-top:20%" type="submit" ng-click="editUser()" value="Update user"
+                   class="btn btn-default"/>
+        </form>
+    </div>
+    <div class="lead">
+        <ul ng-repeat="msg in message">
+            <li><b>{{msg}}</b></li>
+        </ul><p ></p></div>
+</div>
